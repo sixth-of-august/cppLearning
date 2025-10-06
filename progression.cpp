@@ -1,6 +1,3 @@
-// директива для отмены повторной вставки модулей в коде
-#pragma ONCE
-
 #include <iostream>
 
 #include "progression.h"
@@ -10,7 +7,7 @@
    @param diff Разница между элементами прогрессии
    @param amount Количество прогрессии
    @return Сумма n-членов прогрессии*/
-double getProgression(double first, double diff, double amount){
+double getProgression(double first, double diff, int amount){
 
 // считаем последний член а.прогрессии
 double last = first +(amount - 1) * diff;

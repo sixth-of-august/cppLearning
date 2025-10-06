@@ -4,17 +4,17 @@
 Задание:
 Найти сумму членов арифметической прогрессии 
 a, a+d, ..., a+(n-1)d по данным значениям a, d, n*/
-#include <iostream>
-#include <format>
-#include <string>
 
-// пользовательский модуль с функцией для вычисления
-#include "progression.h"
-// используем пространство имён
+#include <iostream> // библиотека ввода и вывода результата
+#include <format> // библиотека для работы функции format
+#include "progression.h" // модуль с функцией
+
+// используем пространство имён std
+// так как там содержится стандартная библиотека
 using namespace std;
 
 // тело программы
-main (){
+int main (){
 
 // переменная first для первого члена прогресии
 // переменная diff для разницы между членами
@@ -42,4 +42,10 @@ cout << format("Результат прогрессии = {:.2f}", resultation) 
 return 0;
 }
 
-// g++ main.cpp -o main.exe -std=c++20
+/*
+создаём исполняемый файл с поддержкой стандартов языка С++20
+g++ ariphmeticTask.cpp progression.cpp -o program.exe -std=c++20
+
+запускаем файл
+./program 
+*/
