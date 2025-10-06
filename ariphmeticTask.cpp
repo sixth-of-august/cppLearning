@@ -8,6 +8,8 @@ a, a+d, ..., a+(n-1)d по данным значениям a, d, n*/
 #include <format>
 #include <string>
 
+// пользовательский модуль с функцией для вычисления
+#include "progression.h"
 // используем пространство имён
 using namespace std;
 
@@ -32,7 +34,12 @@ cin >> diff;
 cout << "Введите количество членов прогрессии для подсчёта" << endl;
 cin >> amount;
 
+// считаем и присваиваем значение
+resultation = getProgression(first, diff, amount);
+
 // вывод результата на экран
 cout << format("Результат прогрессии = {:.2f}", resultation) << endl;
 return 0;
 }
+
+// g++ main.cpp -o main.exe -std=c++20
