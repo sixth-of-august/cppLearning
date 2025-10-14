@@ -54,4 +54,12 @@ void fillArrHand(E* &array, size_t n){
         cin >> array[i]; // заполнение переменной
     };
 
-} }
+ }
+/**
+ @brief Процедура заполнения массива из файла
+ @param array Заполняемый массив
+ @param fileName Имя файла из которого берутся значения
+ @param N Количество элементов в массиве
+ */  
+void fillArrFile(double* &array, char fileName[], size_t &N);
+}

@@ -27,10 +27,18 @@ void fillArr(double *array, size_t n, double minValue, double maxValue){
         array[i] = minValue + (double)rand() / RAND_MAX *(maxValue - minValue); }
         cout << endl; } }// переход на новую строку после вывода 
 
-void fillArrFile(double *array, char fileName[], size_t N){
-    
-    
+/**
+ @brief Процедура заполнения массива из файла
+ @param array Заполняемый массив
+ @param fileName Имя файла из которого берутся значения
+ @param N Количество элементов в массиве
+ */  
+void fillArrFile(double* &array, char fileName[], size_t &N){ 
+    ifstream openFile(fileName); // открываем файл для чтения
 
     for(size_t i = 0; i < N; i++){
+        openFile >> array[i];
     }
+
+    openFile.close();
 }
