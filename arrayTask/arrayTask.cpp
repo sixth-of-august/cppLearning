@@ -8,8 +8,9 @@
 #include <cstdlib> // для работы функции srand 
 #include <ctime> // для работы функции ctime
 #include "arrayModule.hpp"
+
 using namespace std; // используем пространство имёт std 
-using namespace amn;
+using namespace amn; // собственное пространство имён
 
 // главный код
 int main(){
