@@ -1,6 +1,6 @@
 #include <iostream> // библиотека ввода и вывода
 #include <format> //  модуль для использования функции формат
-#include <fstream>
+#include <fstream> // библиотека для хранения потока файлов
 #include "arrayModule.hpp" // заголовочный файл
 
 namespace amn{ //пространство имён "array module namespace"
@@ -35,18 +35,16 @@ void fillArr(double *array, size_t n, double minValue, double maxValue){
  */  
 void fillArrFile(double* &array, char fileName[], size_t &N){ 
     ifstream openFile(fileName); // открываем файл для чтения
-    size_t num = 0; N = 0;
-
-    // запоминаем позицию до подсчёта элементогв файла 
-    streampos pos = openFile.tellg();
+    double num = 0; N = 0;
 
     while(openFile >> num){
-       N = N + 1; // считаем количество элементов
+       N++; // считаем количество элементов
     }
     array = new double[N];
+    
+    openFile.clear(); // сбрасываем позицию в файле
+    openFile.seekg(0); // переходим к началу файла
 
-    openFile.seekg(pos); // переходим к началу файла
- 
     for(size_t i = 0; i < N; i++){
         openFile >> array[i]; // записываем символы из файла
     }

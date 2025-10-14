@@ -7,6 +7,7 @@
 
 using namespace std;
 
+namespace pw{ //namespace progression work
 /** @brief функция для вычисления суммы прогрессии n-членов
    @param first Первый член прогрессии
    @param diff Разница между элементами прогрессии
@@ -23,4 +24,4 @@ if(amount <= 0){
 // считаем последний член а.прогрессии
 double last = first + ((amount - 1) * diff);
 return (amount / 2.0) * (first + last); // считаем сумму членов
-}
+} }

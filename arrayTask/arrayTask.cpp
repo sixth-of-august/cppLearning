@@ -7,6 +7,7 @@
 #include <format> // библиотека для работы функции format
 #include <cstdlib> // для работы функции srand 
 #include <ctime> // для работы функции ctime
+#include <cassert> // для работы проверок через assert
 #include "arrayModule.hpp"
 
 using namespace std; // используем пространство имёт std 
@@ -14,7 +15,7 @@ using namespace amn; // собственное пространство имён
 
 // главный код
 int main(){
-
+  
     srand(time(NULL)); // рандомизируем генератор
 
     size_t N = 0; // переменная для хранения размерности массива 
@@ -33,6 +34,7 @@ int main(){
     printArr(array, N);
 
     result = sumArr(array, N);
+    
     // считаем сумму и выводим результат
     cout << format("Ваша сумма элементов = {:.4}", result) << endl;
 
