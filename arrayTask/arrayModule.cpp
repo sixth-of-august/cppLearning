@@ -1,5 +1,6 @@
 #include <iostream> // библиотека ввода и вывода
 #include <format> //  модуль для использования функции формат
+#include <fstream>
 #include "arrayModule.hpp" // заголовочный файл
 
 namespace amn{ //пространство имён "array module namespace"
@@ -25,3 +26,11 @@ void fillArr(double *array, size_t n, double minValue, double maxValue){
         // заполнение массива случайными значениями
         array[i] = minValue + (double)rand() / RAND_MAX *(maxValue - minValue); }
         cout << endl; } }// переход на новую строку после вывода 
+
+void fillArrFile(double *array, char fileName[], size_t N){
+    
+    
+
+    for(size_t i = 0; i < N; i++){
+    }
+}
