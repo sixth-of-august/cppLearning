@@ -127,5 +127,5 @@ int main(){
 }
 
 /* Компиляциия в консоли: 
-g++ arrayTask.cpp arrayModule.cpp -o program.exe -std=c++20
+g++ arrayTask.cpp -o program.exe -std=c++20
 ./program.exe  */

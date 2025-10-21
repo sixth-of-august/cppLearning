@@ -1,1 +1,0 @@
-#include "arrayModule.hpp" // заголовочный файл
