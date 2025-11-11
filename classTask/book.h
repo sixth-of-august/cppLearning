@@ -41,7 +41,7 @@ class Book{
     int getPublicationYear(){return this->publicationYear; }
 
     /** @brief метод для задания значения в поле page
-        @param page количество страниц */ 
+        @param page количество  страниц */ 
     void setPages(int page){
         // проверяем параметр page
         if(page <= 0){
@@ -51,8 +51,10 @@ class Book{
         // устанавливаем количество страниц
         this->pages = page; }
  
+
     /** @brief метод для получения значения из поля pages */   
-    int getPages(){return this->pages;}
+    // если метод не меняет поля класса, то его лучше сделать констнантой 
+    int getPages() const {return this->pages;} 
 
     /** @brief метод для задания значения в поле readPages
         @param readed прочитанное количество страниц */ 
@@ -144,12 +146,14 @@ class Book{
         } return *this; }
 
     // перегрузка оператора == для сравнения книг по автору
-    bool operator==(Book anotherBook){
+    // автоматически компилятор создаёт оператор сравнения и сравнивает классы по каждому полю
+    bool operator==(Book const &anotherBook){
         return (this->author == anotherBook.author) && (this->title == anotherBook.title);
     }
 
     // перегрузка оператора = для присваивания
-    Book& operator<=(Book anotherBook){
+    // оператор присваивания компилятор создаёт автоматически, передевая значения из одного обьекта в другой
+    Book& operator<=(Book const &anotherBook){
         this->author = anotherBook.author; // присваивания поля author
         this->title = anotherBook.title;   // присваивания поля title
         this->pages = anotherBook.pages;   // присваиваивание поля pages

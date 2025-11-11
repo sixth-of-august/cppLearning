@@ -17,9 +17,12 @@ int main(){
     Book newBook, straustrupbook;
     straustrupbook.newBook("", "Тур по с++", 2013, 254, 100, {"Пособие по С++", "Справочник"});
 
-    vector<Book> bookAr; bookAr.resize(5); // создание динамического массива, конструктор не создаётся
+    vector<Book> bookAr; bookAr.resize(5); // создание динамического массива (0 конструкторов   )
     bookAr[0] = straustrupbook; // добавление элемента в массив
     cout << bookAr[0].toString(); // вызов метода у элемента из массива
+
+    Book statArray[5]; // статичный массив  (5 конструкторов)
+    
 
     // проверка оператора +=
     warAndPiece += 100;
