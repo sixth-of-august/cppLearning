@@ -22,6 +22,10 @@ double sumArr(E *array, size_t n){
         throw invalid_argument("sumArr Error: Количество элементов суммы не может быть <= 0");
     }
 
+    if(array == nullptr){
+        throw invalid_argument("sumArr Error: Не выделена память под массив");
+    }
+
     for(size_t i = 0; i < n; i++){
         temp = temp + array[i]; // суммируем элементы
     }
@@ -40,6 +44,10 @@ void printArr(E *array, size_t n){
     throw invalid_argument("printArr Error: Количество элементов суммы не может быть <= 0");
     }
 
+    if(array == nullptr){
+        throw invalid_argument("sumArr Error: Не выделена память под массив");
+    }
+
 for(size_t i = 0; i < n; i++){ // проходимся циклом по элементам
     cout << format("{:.4} ", array[i]); // выводим элементы на экран
 } cout << endl;}
@@ -56,6 +64,10 @@ void fillArr(E *array, size_t n, double minValue, double maxValue){
 
     if(n <= 0){
     throw invalid_argument("fillArr Error: Количество элементов суммы не может быть <= 0");
+    }
+
+    if(array == nullptr){
+        throw invalid_argument("sumArr Error: Не выделена память под массив");
     }
     
     // проверка на то, что нижняя граница не больше верхней
@@ -83,6 +95,10 @@ void fillArrHand(E* &array, size_t n){
         throw invalid_argument("fillArrHand Error: Количество элементов суммы не может быть <= 0");
     }
 
+    if(array == nullptr){
+        throw invalid_argument("sumArr Error: Не выделена память под массив");
+    }
+
     for(size_t i = 0; i < n; i++){
         cout << format("Введите значение элемента [{}]: ", i + 1) ;
         cin >> array[i]; // заполнение переменной
@@ -91,7 +107,7 @@ void fillArrHand(E* &array, size_t n){
  }
 /**
  @brief Процедура заполнения массива из файла
- @param array Заполняемый массив
+ @param array Заполняемый массив (массив должен быть пустым)
  @param fileName Имя файла из которого берутся значения
  @param N Количество элементов в массиве
  */  
@@ -222,8 +238,11 @@ void fillArrHand(vector<E> &array){
         throw invalid_argument("fillArrHand Error: Вектор неинициализирован");
     }
 
+    E temp = 0;
+
     for(size_t i = 0; i < array.size(); i++){
         cout << format("Введите значение элемента [{}]: ", i + 1) ;
-        cin >> array[i]; // заполнение переменной
+        cin >> temp; // заполнение переменной
+        array.push_back(temp);
     } }
     }

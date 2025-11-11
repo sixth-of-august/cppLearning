@@ -28,6 +28,10 @@ int main(){
     arrayNew = {1, 1, 1}; assert(arrSum(arrayNew) == 3);
     arrayNew = {0, 0, 0}; assert(arrSum(arrayNew) == 0);
 
+    // проверка через подстановки в вектор вещественных чисел
+    vector<double> arrayReal = {1.2, 1.5, 1.3}; assert(arrSum(arrayReal) == 4);
+    arrayReal = {1.5, 1.5, 1.5}; assert(arrSum(arrayReal) == 4.5);
+
     srand(time(NULL)); // рандомизируем генератор
 
     size_t N = 0; // переменная для хранения размерности массива 
