@@ -17,14 +17,9 @@ int main(){
     Book newBook, straustrupbook;
     straustrupbook.newBook("", "Тур по с++", 2013, 254, 100, {"Пособие по С++", "Справочник"});
 
-    // динамическое создания переменной
-    Book* warAndPiece2 = new Book(); // динамическое создание объекта (1 конструктор)
-    // проверка оператора присваивания
-    warAndPiece2 = &warAndPiece;     
-
     vector<Book> bookAr; bookAr.resize(5); // создание динамического массива, конструктор не создаётся
     bookAr[0] = straustrupbook; // добавление элемента в массив
-    bookAr[0].toString(); // вызов метода у элемента из массива
+    cout << bookAr[0].toString(); // вызов метода у элемента из массива
 
     // проверка оператора +=
     warAndPiece += 100;
@@ -38,10 +33,10 @@ int main(){
         cout << endl;}
 
     // вывод экземпляров в консоль в консоль
-    warAndPiece.toString();
-    newBook.toString();
+    cout << warAndPiece.toString();
+    cout << newBook.toString();
 
-    delete warAndPiece2; // очистка памяти после работы конструктора
+    newBook.saveStateToFile("myFile.txt");
     return 0;
 }
 

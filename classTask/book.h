@@ -2,6 +2,7 @@
 #include <iostream>
 #include <vector>
 #include <format>
+#include <fstream>
 #include <string>
 
 // используем пространство имён std
@@ -97,16 +98,27 @@ class Book{
         cout << "Произошла ошибка:" << error.what() << endl;} }
 
     /** @brief метод вывода класса на экран */
-    void toString(){
-        cout << format(" Автор:{}\n Название: {}\n Год написания: {}\n Кол-во страниц:{}\n Прочитано: {}", this->author, this->title, this->publicationYear, this->pages, this->readPages) << endl;
+    string toString(){
+        string output; // возвращаемая строка
+        output = format(" Автор:{}\n Название: {}\n Год написания: {}\n Кол-во страниц:{}\n Прочитано: {}", this->author, this->title, this->publicationYear, this->pages, this->readPages);
        
         // выводим жанры произведения на экран
-        cout << " Жанры: ";
+        output = output +  "\n Жанры: ";
         for(size_t i = 0; i < this->ganres.size(); i++){
-            cout << this->ganres[i] << "; ";
+           output = output + this->ganres[i] + "; ";
         }       
-        cout << "\n" << endl;
+        return output = output + "\n \n";
     }
+
+    /** @brief метод сохранения объекта в файл
+     * @param fileName имя сохраняемого файла*/  
+    void saveStateToFile(string fileName){
+        ofstream myFile(fileName);
+
+        if(myFile.is_open()){
+        // запись обьекта в файл
+        myFile << this->toString();
+    } }
 
     // конструктор класса без параметров
     Book(){
