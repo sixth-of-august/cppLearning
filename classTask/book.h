@@ -57,7 +57,7 @@ class Book{
      * @param readPage количество прочитанных страниц
      * @param ganres жанры произведения
      */
-    void newBook(string author, string title, int year, int pages, int readPages, vector<string> ganres);
+    void writeInBook(string author, string title, int year, int pages, int readPages, vector<string> ganres);
 
 
     /** @brief метод вывода класса на экран */

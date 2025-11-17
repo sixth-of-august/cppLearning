@@ -1,0 +1,22 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0" version="29.0.3">
+  <diagram name="Страница — 1" id="s3NCFQla5ES_vexnuvYg">
+    <mxGraphModel dx="996" dy="626" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="fKM7uDdQdpLOtUNXFITc-1" value="С++&amp;nbsp; Book" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" parent="1" vertex="1">
+          <mxGeometry x="210" y="110" width="480" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="fKM7uDdQdpLOtUNXFITc-2" value="&lt;div&gt;+ author: string&lt;/div&gt;&lt;div&gt;+ title: string&lt;/div&gt;&lt;div&gt;+ ganres: vector&amp;lt;string&amp;gt;&lt;/div&gt;&lt;div&gt;- publicationYear: int&lt;/div&gt;&lt;div&gt;- pages: int&lt;/div&gt;&lt;div&gt;- readPages: int&lt;/div&gt;" style="text;strokeColor=none;fillColor=default;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontColor=#46495D;" parent="fKM7uDdQdpLOtUNXFITc-1" vertex="1">
+          <mxGeometry y="26" width="480" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="fKM7uDdQdpLOtUNXFITc-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#788AA3;labelBackgroundColor=none;fontColor=#46495D;" parent="fKM7uDdQdpLOtUNXFITc-1" vertex="1">
+          <mxGeometry y="130" width="480" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="fKM7uDdQdpLOtUNXFITc-4" value="&lt;div&gt;method:&lt;/div&gt;&lt;div&gt;+ toString(): Book&lt;/div&gt;&lt;div&gt;+writeInBook(author: string, title: string, year: int, pages: int, readPages: int, ganres: vector&amp;lt;string&amp;gt;): Void&lt;/div&gt;&lt;div&gt;+setPublicationYear(year: int): Void&lt;/div&gt;&lt;div&gt;+getPublicationYear(): Int&lt;/div&gt;&lt;div&gt;+setPages(page: int): Void&lt;/div&gt;&lt;div&gt;+getPages(): Void&lt;/div&gt;&lt;div&gt;+setReadedPages(readed: int) : Void&lt;/div&gt;&lt;div&gt;+getReadedPages() : Int&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;~Book()&lt;/div&gt;&lt;div&gt;~Book(author: string, title: string, year: int)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+operator+=(readed: int) : Book&lt;/div&gt;&lt;div&gt;+operator==(anotherBook: Book) : Bool&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=default;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontColor=#46495D;" parent="fKM7uDdQdpLOtUNXFITc-1" vertex="1">
+          <mxGeometry y="138" width="480" height="262" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

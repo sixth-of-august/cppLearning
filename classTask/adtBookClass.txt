@@ -1,5 +1,3 @@
-https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&dark=auto#R%3Cmxfile%3E%3Cdiagram%20name%3D%22%D0%A1%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0%20%E2%80%94%201%22%20id%3D%22s3NCFQla5ES_vexnuvYg%22%3E7VpRb%2BI4EP41kdiHnkhMWPoIod27U7viSrWruzeTmMRXJ0aOKdCH%2B%2B07dhySQFgCqLvsKQiJ%2BPN4PB5%2FM3ZGWMiL158EXkSPPCDMcrrB2kJjy3Fst4%2FgRyGbDLnNgVDQwAgVwJS%2BEQN2DbqkAUkrgpJzJumiCvo8SYgvKxgWgq%2BqYnPOqrMucEj2gKmP2T76lQYyytCB87HAfyc0jPKZ7f5t1hPjXNisJI1wwFclCN1ZyBOcy%2BwpXnuEKeflfsnG3R%2Fo3RomSCKbDPjq2Mi3%2F51Q%2B%2B7%2Bizfh7l%2BbzzdGyytmS7Nga9y1hgCP9LeP44WFRsksVT8gOeL8xaxHbnInpSsaM5xAazTniZyaHhvamNEwgWcfrCQCgFciJAX%2FDk2H5EqzH1EWPOANX6q1pBL7L3lrFHFB30AtZkYndAtpqOL0KxJTNRLgLqCCpCAzyR1k70CPeF0RfMCpNIDPGcOLlM62y4ixCGky4lLy2AitIirJdIF9JbMC9itDZJwbyfCMsBFYEwq%2BTAKPMw7LHyc8cxNlLIcsB%2FWDwcd%2Bz7ivhM%2F1Ry9Z8BdS6kFDt4dsvSe7NMj3FBxN1iXI0OIT4TGRYgMiphchQ1ETo86taa8KxvcGBotKbO%2Fl3MYmysKt7oKI8GC4eAIvnX1eOn2m2BDQV3gMpV66YiReykh5Zag5KWgS5qIwc0X6gAJJpdrns8eHOBEqRQ21030JxuRxowdslWZYRdnRKW7U5i5nDEJGUp78TbBZKoXtPkkJZKr0vKGC4GDSaPhOXgD%2ByT3y1kRAQOZ4qRXm6YKRuTyYLFIIOvDog5YZ9wrkyVBTQRzGzplOuBENApKoQOcSS5xFtQrhBYe1aOq6I%2FgCmb3ub67lgu0etO2iDV8lLiA4E1gOpjrYCKSMFVFp47JssB%2FD303WxwM7D%2BR%2Bszi2u713imNUE8c7JGFU%2ByAjSX7G2jsMMY46Qo8YNpqRgg%2FPii7jG3uPM2ifM6iGH3rXJjylKvQAE5nsDm%2BOUePn7L2NGibxwTttfa9JCoepIh7ovHJazuZTnVU7H7KcND05cSdkpe4ynbrjw6s%2FFRS8qSZgryazegdSpnfmWWGW%2BIWDu09YYErkpHpwdCrGn6k23FdrNP1xwrFi7FMe6mRX8Mut0srOd9YTbBnJNq0j9HPJKLjonGtXWW%2Bh6FRn4VcCd1tJnvk9ZaQDuZF8xnGFoGdbuXvJbzjwPx0%2FH06UvyTems%2BVQzOxizTxNl8QgXVsjiBzHWZD9jJ0hl5Ih6AXJ1xGRGgtW32F9hm8555ndTmjNJjoxGVc4NnrHtreXq%2Fq9mqjQbMbjDNwLr%2FDPLm99eBtPli7KQ1v%2F%2Fxn9vb4XPca2pZHfsHyyB7paiomV1oeqeVl3WtVWx5pyyP%2F5wPmSAwfzt%2FXUR6pta%2FuHbktj%2FyIvf%2BR5ZFa89y2PNKWR9rySFseacsjbXnklxja3l6v6vb6ruURaBb%2FTNF9pf%2F3oLtv%3C%2Fdiagram%3E%3C%2Fmxfile%3E
-
 ADT Book
 Данные:
  public:
@@ -12,7 +10,7 @@ ADT Book
     Количество страниц в книге: int pages = 0; 
     Количество прочитанных страниц в книге: int readPages = 0;           
 
-Операции:
+Методы и конструкторы:
     Конструктор: Book()
         Процесс:
         this->author = "Бьёрн Страуструп";
@@ -21,13 +19,15 @@ ADT Book
         this->publicationYear = 2013; 
         this->readPages = 500;
     
-    Конструктор:  Book(string author, string title, int year)
+
+    Конструктор: Book(string author, string title, int year)
         Процесс:
         this->author = author;
         this->title = title;
         this->setPublicationYear(year);
 
-    Операция: newBook()
+
+    Операция: writeInBook(string author, string title, int year, int pages, int readPages, vector<string> ganres)
     Вход:
     string author - автор произведения
     string title - название книги
@@ -35,3 +35,103 @@ ADT Book
     int pages - количество страниц в книге
     int readPage - количество прочитанных страниц
     vector<string> ganres -  жанры произведения
+    Процес:
+     if(author != ""){this->author = author;  } 
+        if(title != ""){ this->title = title; }   
+        this->setPublicationYear(year);  
+        this->setPages(pages);           
+        this->setReadedPages(readPages);    
+        this->ganres = ganres;            
+    Описание: Метод для заполнения класса значениями
+    
+
+    Операция: string toString() const
+    Процесс:
+        string output;
+        output = format(" Автор:{}\n Название: {}\n Год написания: {}\n Кол-во страниц:{}\n Прочитано: {}", this->author, this->title, this->publicationYear, this->pages, this->readPages);
+        output = output +  "\n Жанры: ";
+        for(size_t i = 0; i < this->ganres.size(); i++){
+           output = output + this->ganres[i] + "; ";
+        }       
+        return output = output + "\n \n";
+    Описание: Метод для вывода класса в консоль
+
+
+    Операция: void saveStateToFile(string fileName)
+    Вход: 
+    string fileName - имя файла, в который происходит сохранение
+    Процесс:
+       ofstream myFile(fileName);
+
+        if(myFile.is_open()){
+        // запись обьекта в файл
+        myFile << this->toString();
+    }
+    Описание: Метод для сохранения класса в файл 
+
+
+    Операция: void Book::setPublicationYear(int year)
+    Вход: int year - год выпуска книги
+    Процесс:
+    // проверяем параметр year 
+    if(year < 0){
+       // если год отрицательный - выдаем ошибку
+        throw invalid_argument("yearError: год не может быть отрицательным");
+        }
+        // задания значения в поле года
+        this->publicationYear = year;
+    Описание: Метод для задания значения в поле publicationYear 
+
+
+    Операция: Book::getPublicationYear() const
+    Процесс: return this->publicationYear;
+    Описание: Метод для получения значения из поля publicationYear 
+
+
+    Операция: void Book::setPages(int page)
+    Вход: int page - количество  страниц 
+    Процесс:
+    if(page <= 0){
+            throw invalid_argument("pageError: число страниц не может быть отрицательным или равно 0");
+        }
+        this->pages = page; 
+    Описание: Метод для получения значения из поля Pages
+
+    Операция: getPages() const 
+    Процесс: return this->pages;
+    Описание: Метод для получения значения из поля pages
+
+
+    Операция: setReadedPages(int readed)
+    Вход: int readed - прочитанное количество страниц 
+    Процесс:
+    if(readed < 0){
+            throw invalid_argument("readedError: количество прочитанных страниц не может быть отрицательным");
+        }
+
+        if((this->pages < readed) || (this->pages == 0)){
+            throw invalid_argument("readedError: количество прочитанных страниц не может быть больше всех страниц");
+        }
+        this->readPages = readed;
+    Описание: Метод для задания значения в поле readPages
+
+
+    Операция: getReadedPages() const;
+    Процесс: return this->readPages;
+    Описание: Метод для получения значения из поля readPages 
+
+
+Перегрузка операторов:
+    Оператор: Book& operator+=(int readed);
+    Описание: Перегрузка оператора += для сложения количество прочитанных страниц
+    Код:
+    setReadedPages(readPages + readed);
+    return *this;
+
+
+    Оператор: bool operator==(const Book &anotherBook) const;
+    Описание: Перегрузка оператора == для сравнения книг по автору
+    Код:
+    this->author = author;
+    this->title = title;
+    this->setPublicationYear(year);

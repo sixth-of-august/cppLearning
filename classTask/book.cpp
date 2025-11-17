@@ -33,11 +33,9 @@ using namespace std;
 
     // перегрузка оператора += для сложения количество прочитанных страниц
     Book& Book::operator+=(int readed){
-        // пробуем записать новое значение
-        try{setReadedPages(readPages + readed); }
-        catch (invalid_argument const &error){
-            cout << error.what(); // в случае ошибки - выводим её
-        } return *this; }
+        // записываем новое значение
+        setReadedPages(readPages + readed);
+        return *this; }
 
 
     // перегрузка оператора == для сравнения книг по автору
@@ -75,8 +73,7 @@ using namespace std;
         this->pages = page; }
  
 
-    /** @brief метод для получения значения из поля pages */   
-    // если метод не меняет поля класса, то его лучше сделать констнантой 
+    /** @brief метод для получения значения из поля pages */ 
     int Book::getPages() const {return this->pages;} 
 
     /** @brief метод для задания значения в поле readPages
@@ -107,21 +104,14 @@ using namespace std;
      * @param readPage количество прочитанных страниц
      * @param ganres жанры произведения
      */
-    void Book::newBook(string author, string title, int year, int pages, int readPages, vector<string> ganres){
-        try{
-        if(author != ""){
-        this->author = author; }            // задания значения в поле author
-        if(title != ""){
-        this->title = title; }              // задания значения в поле title
+    void Book::writeInBook(string author, string title, int year, int pages, int readPages, vector<string> ganres){
+        if(author != ""){this->author = author; }    // задания значения в поле author
+        if(title != ""){ this->title = title; }      // задания значения в поле title
         this->setPublicationYear(year);     // задания значения в поле publicationYear
         this->setPages(pages);              // задания значения в поле pages
         this->setReadedPages(readPages);    // задания значения в поле readPages
         this->ganres = ganres;              // задание значение в поле ganres
-
-        // ловим ошибку, в случае, если не получается задать значение в какое-то поле
-        } catch (invalid_argument const &error){
-        // выводим текст ошибки в консоль
-        cout << "Произошла ошибка:" << error.what() << endl;} }
+        }
 
 
     /** @brief метод вывода класса на экран */
@@ -146,5 +136,7 @@ using namespace std;
         // запись обьекта в файл
         myFile << this->toString();
     } }
+
+    
 
         
