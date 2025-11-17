@@ -43,4 +43,4 @@ int main(){
     return 0;
 }
 
-// компиляция файла -- g++ taskClass.cpp book.h -o task.exe -std=c++20
+// компиляция файла -- g++ taskClass.cpp book.cpp -o task.exe -std=c++20
